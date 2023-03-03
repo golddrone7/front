@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+body{
+	margin : 0px;
+	
+}
+
+a{
+	text-decoration: none;
+	color: white;
+	font-style: bold;
+	font-size: 24px;
+	font-family: sans-serif;
+}
+
+.left-menu span{
+	float: left;
+	margin-top : 30px;
+	margin-left: 40px;
+	
+}
+
+.left-menu span:first-child{
+	margin-left: 360px;
+}
+
+
+.right-menu span{
+	margin-right: 40px;
+}
+
+.right-menu{
+	float: right;
+	margin-top : 30px;
+	margin-right: 100px;
+}
+
+.search{
+	border-radius: 100px;
+	height : 30px;
+	width : 150px;
+	text-align: center;
+}
+
+.header{
+	height : 100px;
+	width : 100%;
+	background-color : gray;	
+}
+
+.logo{
+	position: absolute;
+	top : -20px;
+	left : 50px;
+	
+}

@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="../menu.jsp" %>
+<form action="/book2/login" method="post">
+	<table border="0" align="center" width="350">
+		<tr>
+			<td></td>
+			<td></td>
+		</tr>
+	
+	
+	
+	</table>
+
+
+
+</form>
+
+
+</body>
+</html>

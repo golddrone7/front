@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script type="text/javascript">
+	/* keydown : 키보드의 키가 눌러지는 순간
+		keyup : 눌러진 키가 올라오는 순간
+		keypress : 글자가 입력될때 발생
+	*/
+	
+	//문제. 입력글자의 개수가 50자 이상인 경우 50자까지만 표시하고(substring)
+	//더이상 진행할 수 없도록 alert를 표시하세요
+	// "입력메시지는 50자를 초과할 수 없습니다"
+	$(document).ready(function(){
+		
+		$('textarea').keyup(function(){
+			var inputLength = $(this).val().length;
+			var remain = 50 - inputLength;
+			$('h2').text(remain);
+			if(remain>=0){
+				$('h2').css('color', 'limegreen');
+			} else{
+				$('h2').css('color', 'red');
+				var text1 = $('textarea').val();
+				$('textarea').val(text1.substring(0,50));	
+				alert('입력메시지는 50자를 초과할 수 없습니다');
+				$('h2').text("0");
+			}
+		});	// substring
+		
+	});
+</script>
+</head>
+<body>
+	<div>
+		남은 글자수
+		<h2>50</h2>
+		<textarea rows="20" cols="30"></textarea>
+	</div>
+</body>
+</html>

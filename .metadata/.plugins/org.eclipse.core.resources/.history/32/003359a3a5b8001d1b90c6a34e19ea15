@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/main.css"> 
+
+</head>
+<body>
+<div class="header">
+	<div class="logo">
+		<img alt="logo" src="img/logo1.png">
+	</div>
+	<div class="left-menu">
+		<span><a href="#">회사소개</a></span>
+		<span><a href="#">사업영역</a></span>
+		<span><a href="#">투자정보</a></span>
+		<span><a href="#">인재채용</a></span>
+	</div>
+	<div class="right-menu">
+		<span><a href="#">알기쉬운 제품공정</a></span>
+		<span><a href="#">내 삶속의 회사</a></span>
+		<span><input class="search" type="text" placeholder="제품검색" name="product-search" size="10"></span>
+	</div>
+
+</div>
+<div class="main">
+	<div class="subject">
+	 <div>CHALLENGE ME .</div>
+	 <div>우리와 함께 꿈을 키워 갈 인재를 기다립니다.</div>
+	</div>
+	<hr>
+	<div class="content">
+		<div class="content-main">직무 특성 및 소개</div><br>
+			<div>
+			<p>
+			한국 아이티 산업의 역사를 이끌어 온 우리회사가 미래를 선도하는 글로벌 리더로 함께 성장해 나갈 인재를 모집합니다.<br>
+			글로벌 시장 진출 및 사업다각화가 본격화됨에 따라 체계적, 전문적인 인재 육성의 중요성을 인식하고, 그에 걸맞은 다양한 교육프로그램과 인사제도를 폭넓게 실시하고 있습니다.<br>
+			</p>
+			</div>
+		
+		<br>
+		<b>more</b> > <br><hr>
+		
+		<div class="content-main">인재상</div>
+		<br><br>
+		우리는 신용과 의리에 기반하여 '도전, 헌신, 정도'를 3대 핵심가치로 삼는 인재상을 추구하고 있습니다.<br><br>
+		<b>Challenge</b> ㆍ 기존의 틀에 안주하지 않고 변화와 혁신을 통해 최고를 추구하는 도전적인 사람<br><br>
+		<b>Dedication</b> ㆍ 회사, 고객, 동료와의 인연을 소중히 여기고 큰 목표를 위해 혼신의 힘을 다하는 헌신적인 사람<br><br>
+		<b>Intergrity</b> ㆍ 자긍심을 바탕으로 원칙에 따라 바르고 공정하게 행동하는 정도의 사람
+		<br><br><br>
+		<b>more</b> > 
+		<hr>
+		
+		<button>채용사이트 바로가기</button>
+	</div>
+</div>
+
+
+
+
+</body>
+</html>

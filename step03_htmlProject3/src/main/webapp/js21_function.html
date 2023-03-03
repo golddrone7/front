@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function plusFuc(){
+		var a = parseInt(frm.a.value);		// 자바스크립트는 태그 하나하나가 객체로 인식
+		var b = parseInt(frm.b.value);		// Document 객체
+		
+		if(isNaN(a) || isNaN(b)){
+			alert("입력된 값이 숫자가 아니에요");
+			frm.a.value="";
+			frm.b.value="";
+			frm.a.focus();
+			return;
+		}	// Not a Number , Not Available (숫자가 아닌 것)
+		frm.rs.value=a+b;
+	}
+
+	function diviFuc(){
+		var a = parseInt(frm.a.value);
+		var b = parseInt(frm.b.value);
+		rs = a/b	
+		
+		if(isFinite(rs)==false){		// isFinite() 유한수 판별
+			alert('0으로 나눌수 없습니다');
+			frm.a.value="";
+			frm.b.value="";
+			frm.a.focus();
+			return;
+		}
+		frm.rs.value = rs;
+	}
+	
+</script>
+</head>
+<body>
+<form name="frm">
+	
+	A값 : <input type="text" size='7' name="a"> &nbsp;&nbsp;&nbsp;
+	B값 : <input type="text" size='7' name="b"> &nbsp;&nbsp;&nbsp;
+	결과 : <input type="text" size="7" name="rs">
+	<br><br>
+	<input type="button" name="+" value="더하기" onclick="plusFuc()">
+	<input type="button" name="/" value="나누기" onclick="diviFuc()">
+</form>
+</body>
+</html>

@@ -1,0 +1,13 @@
+package biz;
+
+public class LoginBiz {
+
+	public LoginBiz() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public boolean getLoginUser(String id, String pwd) {
+		return false;
+	}
+
+}

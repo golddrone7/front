@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+</head>
+<body>
+<form name="form1">
+	<input type="checkbox" name="ck" class="ck" id="check1">농구
+	<input type="checkbox" name="ck" class="ck" id="check2">낚시
+	<input type="checkbox" name="ck" class="ck" id="check3">게임
+	<input type="checkbox" name="ck" class="ck" id="check4">바둑
+	<input type="checkbox" name="ck" class="ck" id="check5">여행
+	<!-- <input type="button" value="선택하신 취미의 개수"  id="go"> -->
+	<input type="button" value="선택하신 취미의 개수"  onclick="go2()">
+</form><br><br>
+<div id="rs"></div>
+<script type="text/javascript">
+/* 
+	$("#go").click(function(){
+		$('#rs').html("선택하신 취미는 " + $(".ck:checked").length + "개를 선택함").css('color', 'blue');
+	});
+ */
+ // 위 코드를 자바스크립트로 변환해주세요
+	
+
+ 	function go(){
+	 	var m = 0;
+
+	 	for(var i=0; i<=4; i++){
+	 		//if(document.getElementById("check"+i).checked)
+	 		if(document.getElementsByClassName("ck")[i].checked)	 		
+	 			m++;	
+	 	}
+	 	document.getElementById("rs").innerText = "선택하신 취미는 " + m + " 개를 선택함"; 
+//	 	document.getElementById("rs").innerHTML = "<br>선택하신 취미는<br><br> " + m + " 개를 선택함"; 
+ 	}
+ 
+ 	function go2(){
+ 		var cnt=0;
+ 		var len = document.form1.elements.length;
+ 		//alert(len);
+ 		for(var i=0; i<len; i++){
+ 			var ob = document.form1.elements[i];
+ 			if(ob.name=="ck")
+ 				if(ob.checked){
+ 					++cnt;
+ 				}
+ 		}
+ 		
+ 		document.getElementById("rs").innerHTML = "<span style='color:blue;'>취미의 갯수는 " + cnt + "입니다.</span>";
+ 	}
+
+</script>
+</body>
+</html>

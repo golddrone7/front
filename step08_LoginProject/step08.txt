@@ -1,0 +1,12 @@
+step08_LoginProject --Dynamic web project
+					  dynamic web module version : 3.0 이상
+					  context root : log
+					  content directory : webapp
+				
+src/main/java
+	common
+		jdbcTemplate.java -- 복사
+		
+src/main/webapp
+	table_schema
+		table.sql  -- 데이터베이스 (복사)

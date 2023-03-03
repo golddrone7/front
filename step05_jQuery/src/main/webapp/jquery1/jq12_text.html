@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script type="text/javascript">
+
+var id = "admin";
+
+$().ready(function(){
+	$('input').keyup(function(){
+		var pwd1 = $('#pwd1').val();
+		var pwd2 = $('#pwd2').val();
+		if(pwd1 === pwd2)
+			$('#rs').text("비밀번호가 일치합니다").css({"color" : "green"});
+		else
+			$('#rs').text("비밀번호가 일치하지 않습니다").css({"color" : "red"});	
+	});
+});
+</script>
+</head>
+<body>
+<!-- 비밀번호가 일치합니다 / 비밀번호가 일치하지 않습니다 -->
+<h4>비밀번호를 입력하세요 </h4>
+비밀번호 : <input type="text" id="pwd1">&nbsp;&nbsp;&nbsp;
+비밀번호 확인 : <input type="text" id="pwd2">&nbsp;&nbsp;&nbsp;
+<span id="rs"></span>
+</body>
+</html>

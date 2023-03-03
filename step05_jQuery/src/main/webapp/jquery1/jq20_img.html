@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<style>
+	.container{
+		position: absolute;
+		top: 50px;
+		left: 150px;
+		width: 400px;
+		height: 500px;
+		border: 10px solid gray;
+	}
+</style>
+</head>
+<body>
+<span style="color: gray; font-size : 15px;" >크게 보시려면 이미지를 클릭하세요</span>
+<br><br>
+<img id="img1" src="../image/cat1.png" width="50px" height="50px"><br>
+<img id="img2" src="../image/cat2.png" width="50px" height="50px"><br>
+
+<div id="rs" class="container"></div>
+<script type="text/javascript">
+
+$().ready(function(){
+	$('#img1').click(function(){
+		$('#rs').html('<img id="img1" src="../image/cat1.png" width="400px" height="500px">');
+	});
+	$('#img2').click(function(){
+		$('#rs').html('<img id="img1" src="../image/cat2.png" width="400px" height="500px">');
+	});
+	
+});
+</script>
+</body>
+</html>

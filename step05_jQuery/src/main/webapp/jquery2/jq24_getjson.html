@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#btn").click(function(){
+			$.getJSON('json1.txt', function(data){
+				alert(data);
+				alert(JSON.stringify(data));
+				alert(data.id+" "+data.pw);
+			});		
+		});
+	});
+	
+
+	
+</script>
+</head>
+<body>
+	<button id="btn">json 데이터 불러오기</button>
+</body>
+</html>

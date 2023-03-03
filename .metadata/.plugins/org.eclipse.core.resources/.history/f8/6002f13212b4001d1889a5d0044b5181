@@ -1,0 +1,9 @@
+package biz;
+
+public class LoginBiz {
+
+	public boolean getLoginUser(String id, String pwd) {
+		return false;
+	}
+
+}

@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+
+ function startMethod(){
+	var xhr = new XMLHttpRequest();
+	var url= "result.jsp?"+ getParamValue();
+	 
+ }
+ 
+ function getParamValue(){
+	 var name = encodeURI(document.getElementById("name").value);
+	 var age= encodeURI(document.getElementById("age").value);
+	 var phone = encodeURI(document.getElementById("phone").value);
+	 return "name="+name+"&age="+age+"&phone="+phone;
+ }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$("#btn").click(function(){
+			$.getJSON('json2.txt', function(data){
+				//alert(JSON.stringify(data));
+				$("#disp").empty();
+				/* empty() 태그는 남겨두고 내용만 지우기 */
+				
+				var t = '<table border="1"><tr><td>번호</td><td>아이디</td><td>비밀번호</td></tr>';
+				
+				$.each(data, function(index, entry){
+					//alert(JSON.stringify(entry));
+					t+="<tr>";
+					t+="<td>"+(index+1)+"</td>";
+					t+="<td>"+entry.id+"</td>";
+					t+="<td>"+entry.pw+"</td></tr>";
+				});
+				t+="</table>";
+				
+				//$('#disp').html(t);
+				$('#disp').append(t);
+				/* append() : 선택요소의 마지막에 추가
+				   prepand() : 선택요소의 앞에 추가
+				 */
+			});		
+		});
+	});
+</script>
+</head>
+<body>
+	<button id="btn">json 데이터 불러오기</button>
+	<div id="disp"></div>
+</body>
+</html>

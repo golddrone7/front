@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+
+ function startMethod(){
+	var xhr = new XMLHttpRequest();
+	 
+	 
+ }

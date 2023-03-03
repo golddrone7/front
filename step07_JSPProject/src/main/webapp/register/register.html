@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script type="text/javascript" src="registerCheck.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<script type="text/javascript">
+	//jQuery 이용 비번 일치 검사
+	$().ready(function(){
+		$("#passwd").keyup(function(){
+			pw1=$("#passwd").val();
+			if(pw1!=""){
+				$("#pwd1").html("");
+			} else{
+				$("#pwd1").html("패스워드를 적어주세요");
+			}
+		});
+		$("#repasswd").keyup(function(){
+			pw1=$("#passwd").val();
+			pw2=$("#repasswd").val();
+			if(pw1!=pw2){
+				$("#pwd2").text("비밀번호가 일치하지 않습니다.").css({'font-weight':'bold', 'color' : 'red'});
+			} else {
+				$("#pwd2").text("비밀번호가 일치합니다.").css({'font-weight':'bold', 'color' : 'limegreen'});
+			}
+		});
+	});
+</script>
+</head>
+
+<body>
+<form name="regForm" method="post" action="registerProc.jsp">
+<table width="80%" align="center" border="0" cellspacing="0" cellpadding="5" >
+  <tr> 
+    <td align="center" valign="middle" > 
+      <table width="90%" border="1" bgcolor="#FFFFCC" cellspacing="0" cellpadding="2"  align="center">
+          <tr align="center" bgcolor="#996600"> 
+            <td colspan="3"><font color="#FFFFFF"><b>회원 가입</b></font></td>
+          </tr>
+          <tr> 
+            <td width="24%">*아이디</td>
+            <td width="35%"> <input type="text" name="mem_id" size="15" id="sid"> </td>
+            <td width="41%" id="idok">아이디를 적어 주세요.</td>
+          </tr>
+          <tr> 
+            <td>*패스워드</td> 
+            <td> <input type="password" name="mem_passwd" size="15" id="passwd"></td>
+            <td id="pwd1">패스워드를 적어주세요.</td>
+          </tr>
+          <tr> 
+            <td>*패스워드 확인</td>
+            <td> <input type="password" name="mem_repasswd" size="15" id="repasswd"> </td>
+            <td id="pwd2">패스워드를 확인합니다.</td>
+          </tr>
+          <tr>  
+            <td>*이름</td>
+            <td> <input type="text" name="mem_name" size="15"> </td>
+            <td>고객실명을 적어주세요.</td>
+          </tr>
+          <tr> 
+            <td>이메일</td>
+            <td> <input type="text" name="mem_email" size="27"> </td>
+            <td>이메일을 적어주세요</td>
+          </tr>
+          <tr>  
+            <td>전화번호</td>
+            <td> <input type="text" name="mem_phone" size="20"> </td>
+            <td>연락처를 적어주세요</td>
+          </tr>
+          
+          
+          
+          <tr>  
+            <td>주소</td>
+            <td colspan="2"> 
+            <!-- 카카오 주소 api 링크 https://postcode.map.daum.net/guide#sample -->
+            	<input type="text" id="sample4_postcode" name="mem_zipcode" placeholder="우편번호">
+				<input type="button" onclick="zipCode()" value="우편번호 찾기"><br>
+				<input type="text" id="sample4_roadAddress" name="mem_roadaddr" placeholder="도로명주소">
+				<input type="text" id="sample4_jibunAddress" name="mem_jibunaddr" placeholder="지번주소">
+				<span id="guide" style="color:#999;display:none"></span>
+				<input type="text" id="sample4_detailAddress" name="mem_detailaddr" placeholder="상세주소">
+				<input type="text" id="sample4_extraAddress" name="mem_extraaddr" placeholder="참고항목">
+         		<input type="text" id="mem_addr" name="mem_addr" style="display: none;">
+         		
+            </td>
+          </tr>
+          <tr> 
+            <td colspan="3" align="center"> 
+             <input type="button" value="회원가입" onclick="check()">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+             <input type="reset" value="다시쓰기"> 
+            </td>
+          </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+</form>
+<script type="text/javascript">
+//본 예제에서는 도로명 주소 표기 방식에 대한 법령에 따라, 내려오는 데이터를 조합하여 올바른 주소를 구성하는 방법을 설명합니다.
+
+
+</script>
+</body>
+</html>
+
+

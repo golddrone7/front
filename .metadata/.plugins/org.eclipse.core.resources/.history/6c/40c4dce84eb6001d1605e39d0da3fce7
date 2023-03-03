@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+
+ 
+ function sum(){
+	 var url = "sumTest.jsp/?"+getParam();
+	 var xhr = new XMLHttpRequest();
+	 
+	 
+	 xhr.onreadystatechange = function()
+	 
+	 
+ }

@@ -1,0 +1,27 @@
+package step10_Ajax;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class algorithm {
+
+	public static void main(String[] args) {
+		int a = 2;
+		int b = 1;
+		int n = 20;
+		int answer = 0;
+		
+		do {
+			answer+=n/3*b;
+			int m = n/3*b;
+			n=n-a*m+m;
+			System.out.println(n);
+		} while(n>=a);
+		
+		System.out.println(answer);
+
+		
+	}
+}

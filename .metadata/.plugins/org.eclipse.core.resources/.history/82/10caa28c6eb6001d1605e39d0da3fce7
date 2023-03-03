@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h3>계정과 패스워드를 입력하세요</h3>
+<!-- 계정과 패스워드 처리는 ajax로 처리하는 경우는 없음
+일반적인 경우는 패스워드 비교
+ -->
+ <form id="loginf" action="login.jsp">
+ 		<table border="1" style="height: 100px; width: 500px; text-align: center;">
+		<tr>
+			<td>뉴스내용</td>
+		</tr>
+		<tr>
+			<td id="demo">잠시 기다리세요......</td>
+		</tr>		
+	
+	</table>
+ </form>
+ 
+
+
+</body>
+</html>

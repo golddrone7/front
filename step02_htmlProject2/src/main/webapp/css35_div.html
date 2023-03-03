@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	* {margin: 0; padding: 0; border: 0;}
+	div.aa { 
+		background-color: #ffe400;
+		width : 80px; 
+		height: 100px;
+		border-style: solid;
+		float: left;
+		margin: 10px;
+	}
+	div.bb{
+		background-color: #47c83e;
+		width: 98px;
+		clear: both; /* 자기를 기준으로 인접한 형태를 지움 */ 
+	}
+	div.cc{
+		width: 40px;
+		float: left;/* 그 다음에 오는 요소를 왼쪽 정렬 */
+		background-color: #d1b2ff;
+		height: 150px;
+		
+	}
+</style>
+</head>
+<body>
+	<div class="aa">
+		AA
+	</div>
+	
+	<div class="cc">
+		CC
+	</div>
+
+	<div class="bb">
+		BB
+	</div>
+</body>
+</html>

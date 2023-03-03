@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<script type="text/javascript">
+$().ready(function(){
+	/* mouseenter, mouseleave */
+/* 	$('img')
+	.mouseenter(function(){
+		$(this).attr('src', '../image/americano.jpg');
+	})	// ; 은 빼고 동작
+	.mouseleave(function(){
+		$(this).attr('src', '../image/cafelatte.jpg');
+	}); */
+/* mouseover, mouseout */
+	
+	/* 	$('img').mouseover(function(){
+		$(this).attr('src', '../image/americano.jpg');
+	});
+	$('img').mouseout(function(){
+		$(this).attr('src', '../image/cafelatte.jpg');
+}) */
+
+	/* 동작 이상--------------------------------------------	 */
+	$('#d2')
+	.mouseover(function(){
+		$('img').attr('src', '../image/americano.jpg');
+	})	// ; 은 빼고 동작
+	.mouseout(function(){
+		$('img').attr('src', '../image/cafelatte.jpg');
+	});
+	
+	//mouseover/mouseout 는 직접 이벤트를 걸지 않은 자식 엘리먼트에 포인터가 이동해도 발생
+	//mouseenter/mouseleave는 자기 자신의 엘리먼트에 포인터가 와야 이벤트 발생
+	
+});
+</script>
+<body>
+<div id="d1" style="border: 1px solid red; width:640px; height:480px; padding:100px">
+	<div id="d2" style="border: 1px solid red; width:300px; height:220px;">
+		<img src="../image/cafelatte.jpg">	
+	</div>
+</div>
+</body>
+</html>

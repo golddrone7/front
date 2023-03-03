@@ -1,0 +1,72 @@
+package com.book.dao;
+
+import static common.JdbcTemplate.*;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+
+import com.book.dto.BookDTO;
+
+public class BookDAO {
+	public ArrayList<BookDTO> getBookList() {
+		ArrayList<BookDTO> list = null;
+		Connection conn = getConnection();
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String sql = "select * from bookshop3";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				if(list==null)
+					list = new ArrayList<>();
+				BookDTO book = new BookDTO();
+				book.setIsbn(rs.getString("isbn"));
+				book.setTitle(rs.getString("title"));
+				book.setAuthor(rs.getString("author"));
+				book.setCompany(rs.getString("company"));
+				book.setPrice(rs.getInt("price"));
+				list.add(book);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			close(conn);
+			close(pstmt);
+			close(rs);
+		}
+		return list;
+	}
+
+	public boolean bookInsert(BookDTO entity) {
+		boolean isBook = false;
+		Connection conn = getConnection();
+		PreparedStatement pstmt = null;
+		
+		String sql = "insert into bookshop3(isbn, title, author, company, price) values (?,?,?,?,?)";
+		
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, entity.getIsbn());
+			pstmt.setString(2, entity.getTitle());
+			pstmt.setString(3, entity.getAuthor());
+			pstmt.setString(4, entity.getCompany());
+			pstmt.setInt(5, entity.getPrice());
+			if(pstmt.executeUpdate()>0) {
+				isBook=!isBook;
+				commit(conn);
+			}
+		} catch (SQLException e) {
+			rollback(conn);
+			e.printStackTrace();
+		} finally {
+			close(conn);
+			close(pstmt);
+		}
+		return isBook;
+	}
+}

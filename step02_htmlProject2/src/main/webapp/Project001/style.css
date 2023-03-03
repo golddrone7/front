@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+*{
+	text-decoration: none;
+	box-sizing: border-box;
+}
+
+
+
+header {
+	display: flex;	
+}
+.sidemenu{
+	flex-direction: row;	
+	
+}

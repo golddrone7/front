@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-item {
+  border-bottom: 1px solid #ccc;
+}
+
+.menu-link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.sub-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+.sub-menu-item {
+  border-bottom: 1px solid #eee;
+}
+
+.sub-menu-item a {
+  display: block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: #555;
+}
+
+.menu-item:first-child .sub-menu {
+  display: block;
+}
+
+.menu-item:not(:first-child) .sub-menu {
+  display: none;
+}
+
+.menu-item:not(:first-child):hover .sub-menu {
+  display: block;
+  }
+  
+  .menu-item {
+  border-bottom: 1px solid #ddd;
+	}
+
+.menu-link {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.sub-menu {
+  display: none;
+}
+
+.menu-item:first-child .sub-menu,
+.menu-item:not(:first-child):hover .sub-menu {
+  display: block;
+}
+
+</style>
+</head>
+<body>
+<div class="menu">
+  <ul class="menu-list">
+  <li class="menu-item">
+    <a href="#" class="menu-link">Home</a>
+    <ul class="sub-menu">
+      <li class="sub-menu-item"><a href="#">1</a></li>
+      <li class="sub-menu-item"><a href="#">2</a></li>
+      <li class="sub-menu-item"><a href="#">3</a></li>
+      <li class="sub-menu-item"><a href="#">4</a></li>
+    </ul>
+  </li>
+  <li class="menu-item">
+    <a href="#" class="menu-link">Menu 1</a>
+    <ul class="sub-menu">
+      <li class="sub-menu-item"><a href="#">1</a></li>
+      <li class="sub-menu-item"><a href="#">2</a></li>
+      <li class="sub-menu-item"><a href="#">3</a></li>
+      <li class="sub-menu-item"><a href="#">4</a></li>
+    </ul>
+  </li>
+  <li class="menu-item">
+    <a href="#" class="menu-link">Menu 2</a>
+    <ul class="sub-menu">
+      <li class="sub-menu-item"><a href="#">1</a></li>
+      <li class="sub-menu-item"><a href="#">2</a></li>
+      <li class="sub-menu-item"><a href="#">3</a></li>
+      <li class="sub-menu-item"><a href="#">4</a></li>
+    </ul>
+  </li>
+  <li class="menu-item">
+    <a href="#" class="menu-link">Menu 3</a>
+    <ul class="sub-menu">
+      <li class="sub-menu-item"><a href="#">1</a></li>
+      <li class="sub-menu-item"><a href="#">2</a></li>
+      <li class="sub-menu-item"><a href="#">3</a></li>
+      <li class="sub-menu-item"><a href="#">4</a></li>
+    </ul>
+  </li>
+</ul>
+</div>
+</body>
+</html>

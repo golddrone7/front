@@ -1,0 +1,16 @@
+package dto;
+
+// VO DTO BEAN
+public class LoginDTO {
+	private String userid;
+	private String userpwd;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

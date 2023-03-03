@@ -1,0 +1,25 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+.top {
+	background-color: skyblue;
+	
+}
+
+
+</style>
+
+</head>
+<body>
+<div class="top">
+<span><a href="index.jsp">처음화면</a></span>
+<span><a href="./login/loginOk.jsp">로그인화면</a></span>
+
+</div>
+
+

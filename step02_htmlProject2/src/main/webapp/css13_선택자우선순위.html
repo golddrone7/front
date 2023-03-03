@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	/* 선택자의 우선순위  
+	    인라인 선택자>아이디 선택자>클래스 선택자>태그 선택자
+	*/
+	p{font-size: 10px; font-weight: bold; color:blueviolet;}	/* 태그 선택자  */
+	.t1{font-size: 20px; font-family: 나눔고딕; color:purple;}	/* 클래스 선택자 */
+	#t2{font-size: 40px; font-family: 휴먼매직체1, 휴먼옛체; color:orange;} /* 아이디 선택자 */	  
+	
+	/* font-family 글꼴이 앞에 없는 경우 뒤에것을 사용  */
+	
+</style>
+</head>
+<body>
+	<h3>[CSS를 이용한 폰트]</h3>
+	<p class="t1" id="t2">Good Afternoon</p>
+	<p class="t1">안녕하세요</p>
+	<p class="t1" id="t2" 
+		style="color:red; font-size: 30px">Good Afternoon</p> <!--인라인 선택자  -->
+	<p>안녕하세요</p>
+	<strong class="t1" id="t2">안녕하세요</strong>
+</body>
+</html>

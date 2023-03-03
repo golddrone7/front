@@ -1,0 +1,36 @@
+<%@page import="com.book.dto.BookDTO"%>
+<%@page import="java.util.ArrayList"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="../menu.jsp" %>
+<div style="text-align: center;">
+	<% request.setCharacterEncoding("utf-8"); 
+	  ArrayList<BookDTO> list =(ArrayList<BookDTO>) request.getAttribute("book");
+	%>
+	<div style="font-size: 25px; font-weight: bold; text-align: center;">도서전체확인</div>
+	 <div>
+	 <table width="800px" border="1px" style="border-radius: 200;">
+	 	<tr>
+	 		<td>도서코드</td>
+	 		<td>책이름</td>
+	 		<td>저자</td>
+	 		<td>출판사</td>
+	 		<td>가격</td>
+	 	</tr>
+	 <% if(list!=null){ 
+	 for(BookDTO book : list){ %>
+		<tr>
+			<td><%=book.getIsbn() %></td> 		
+	 		<td><%=book.getTitle() %></td> 		
+	 		<td><%=book.getAuthor() %></td> 		
+	 		<td><%=book.getCompany() %></td> 		
+	 		<td><%=book.getPrice() %></td> 		
+		</tr>
+	 <% }} %>
+	 </table>
+	 </div>
+	 <div style="height: 20px;"> </div>
+	 <div><a href="bookInput.jsp">도서등록</a></div>
+</div>
+</body>
+</html>

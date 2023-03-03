@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 1부터 100까지 전체합 : 5050
+	 1부터 100까지 홀수합 : 2500
+	 1부터 100까지 짝수합 : 2550
+ -->
+
+<script>
+var sum=0, even=0, odd=0;
+
+for(var i=1; i<=100; i++){
+	sum+=i;
+	if(i%2==0) even+=i;
+	else odd+=i;
+}
+
+document.write("1부터 100까지 전체합 : " + sum + "<br>");
+document.write("1부터 100까지 홀수합 : " + odd + "<br>");
+document.write("1부터 100까지 짝수합 : " + even + "<br>");
+
+
+
+
+
+
+</script>
+
+</body>
+</html>

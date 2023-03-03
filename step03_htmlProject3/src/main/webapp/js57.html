@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<canvas id="mycanvas1" width="200px" height="100px"
+	style="border: 4px solid red"></canvas>
+	<canvas id="mycanvas2" width="200px" height="100px"></canvas>
+<canvas id="mycanvas3" width="200px" height="100px"></canvas>
+
+
+
+<script type="text/javascript">
+	var canvas=document.getElementById("mycanvas3");
+	var ctx=canvas.getContext('2d');
+	
+	var grd=ctx.createLinearGradient(0,0, 200,0); /* x1, y1, x2, y2 */
+	grd.addColorStop(0, "black");
+	grd.addColorStop("0.3", "magenta");
+	grd.addColorStop("0.5", "cyan");
+	grd.addColorStop("0.7", "yellow");
+	grd.addColorStop("0.9", "green");
+	grd.addColorStop(1, "red");
+	ctx.fillStyle=grd;
+	ctx.fillRect(10,10,150,80);
+
+
+	var canvas=document.getElementById("mycanvas2");
+	var ctx=canvas.getContext('2d');
+	
+	var grd=ctx.createLinearGradient(0,0, 200,0); /* x1, y1, x2, y2 */
+	grd.addColorStop(0, "white");
+	grd.addColorStop(1, "red");
+	ctx.fillStyle=grd;
+	ctx.fillRect(10,10,150,80);
+
+
+
+	var canvas=document.getElementById("mycanvas1");
+	var ctx=canvas.getContext('2d');
+	
+	var grd=ctx.createLinearGradient(0,0, 160,0); /* x1, y1, x2, y2 */
+	grd.addColorStop(0, "green");
+	grd.addColorStop(1, "white");
+
+	ctx.fillStyle=grd;
+	ctx.fillRect(10,10,150,90);
+</script>
+
+</body>
+</html>

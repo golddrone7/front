@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>표준 이벤트 모델</title>
+<style type="text/css">
+	#box{
+		background-color: skyblue;
+		border: 1px solid black;
+		padding: 5px;
+		width: 300px;
+		height: 200px;
+	}
+</style>
+<script type="text/javascript">
+function addEventHandler(){
+	document.getElementById("box").addEventListener("mousemove", myFunction);
+	/* target.addEventListener(type, 처리기) */
+}
+function removeEventHandler(){
+	document.getElementById("box").removeEventListener("mousemove", myFunction);
+}
+
+function myFunction(){
+	document.getElementById("disp").innerHTML=
+		"x좌표 : " + event.x+"&nbsp;&nbsp;&nbsp;" + "y좌표 : " + event.y; 
+}
+
+</script>
+</head>
+<body>
+	<div id="box">
+		<button onclick="addEventHandler()" id="startbtn">시작</button>
+		<button onclick="removeEventHandler()" id="stopbtn">정지</button>
+		
+	
+	</div>
+	<p id="disp"></p>
+</body>
+</html>

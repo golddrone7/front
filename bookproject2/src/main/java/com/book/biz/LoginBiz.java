@@ -1,0 +1,12 @@
+package com.book.biz;
+
+import com.book.dao.LoginDAO;
+
+public class LoginBiz {
+
+	public boolean getLoginUser(String id, String password) {
+		LoginDAO dao = new LoginDAO();
+		boolean isLogin = dao.getLoginUser(id, password);
+		return isLogin;
+	}
+}

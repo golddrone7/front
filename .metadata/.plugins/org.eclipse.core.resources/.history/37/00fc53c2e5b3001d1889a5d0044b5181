@@ -1,0 +1,27 @@
+package com.book.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+import static common.JdbcTemplate.*;
+
+public class LoginDAO {
+
+	public boolean getLoginUser(String id, String password) {
+		boolean isLogin=false;
+		Connection conn = getConnection();
+		PreparedStatement pstmt = null;
+		
+		String sql = "select * from member3 where id=? and password=?";
+		
+		
+		
+		
+		
+		
+		
+		
+		return isLogin;
+	}
+
+}

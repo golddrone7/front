@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var win=window.open('win1.html','', 'width=300, height=200');
+
+	window.onload=function(){
+		win.moveTo(100, 100);
+	}
+	window.setInterval(function() {
+		win.moveBy(200,200);
+	}, 1000);
+	
+	window.setTimeout(function(){
+		win.close();
+	},5000);
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

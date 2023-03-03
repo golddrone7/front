@@ -1,0 +1,29 @@
+package com.book.dao;
+
+import static common.JdbcTemplate.*;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+
+import com.book.dto.BookDTO;
+
+public class BookDAO {
+
+
+	public ArrayList<BookDTO> getBookList() {
+		ArrayList<BookDTO> list = null;
+		Connection conn = getConnection();
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		String sql = "select * from bookshop3";
+		rs = conn.prepareStatement(sql);
+		
+		
+		
+		return list;
+	}
+	
+}

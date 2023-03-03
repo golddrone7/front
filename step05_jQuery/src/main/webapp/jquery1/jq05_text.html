@@ -1,0 +1,59 @@
+<!-- jquery로 동작 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<style type="text/css">
+	.container{
+		position: absolute;
+		top : 30px;
+		left: 100px;
+		height: 200px;
+		width: 300px;
+		border: 1px solid red;
+		padding: 20px;
+	}
+</style>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+<script type="text/javascript">
+
+	$().ready(function(){
+		$('#rs').text('왼쪽 메뉴를 선택하세요');
+		
+		/* 버튼 1을 눌렀습니다 style="color:red" */
+		$('#btn1').click(function(){
+			$('#rs').text('').removeAttr('style');
+			$('#rs').html("버튼 1을 눌렀습니다").css({'color': 'red', 'fon-weight': 'bold', 'font-size': '20px'});
+		});
+		
+		$('#btn2').click(function(){
+			$('#rs').text('').removeAttr('style');
+			$('#rs').html("버튼 2를 눌렀습니다").css({'color': 'blue', 'fon-weight': 'bold', 'font-size': '20px'});
+		})
+		
+		$('#mo').click(function(){
+			$('#image').slideToggle(2000);
+		});
+	});
+</script>
+
+</head>
+<body>
+	<a id="btn1" href="#" class="link-danger">버튼1</a><br><br>
+	<a id="btn2" href="#">버튼2</a><br><br>
+	<button type="button" class="btn btn-success" id="mo">Success</button>
+	<br><br>
+	<div id="rs" class="container"></div>
+	<img src="../image/cafelatte.jpg" class="rounded mx-auto d-block" alt="image" id="image">
+	
+</body>
+</html>
+

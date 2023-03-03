@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<!-- 필드셋, 테이블 사용, input, option,   -->
+<body>
+<form action="#" autocomplete="off">
+<fieldset>
+<legend>회원가입</legend>
+<table>
+<tr>
+<td>아이디</td>
+<td><input  placeholder="아이디를 입력하시오" name="id"> </td>
+</tr>
+<tr>
+<td>비밀번호</td>
+<td><input placeholder="비밀번호를 입력하시오" name="password"> </td>
+</tr>
+<tr>
+<td>비밀번호 재확인</td>
+<td><input placeholder="비밀번호를 재입력하시오" name="password"> </td>
+</tr>
+<tr><td><br></td></tr>
+<td>이름</td>
+<td><input name="name"></td>
+</tr>
+<tr>
+<td>성별</td>
+<td><input type="radio" name="gender" value="man" id="gender-man" ><label for="gender-man">남자</label>
+	<input type="radio" name="gender" value="woman" id="gender-woman"><label for="gender-woman">여자</label>
+</td>
+</tr>
+<tr>
+<td>생일</td>
+<td><input type="date" name="date"></td>
+</tr>
+<tr>
+<td colspan="2"><input type="email" name="email" placeholder="본인확인 (이메일)" size="35"></td>
+</tr>
+</table>
+
+
+<br>
+<table>
+<tr>
+<td><select><option>+82</option><option>+02</option></select></td><td><input type="text" name="phone" pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}"
+				title="###-####-####"></td><td><button value="인증" id="auth">인증</button></td>
+</tr>
+<tr>
+<td colspan="2"><input type="text" name="correct" size="28" placeholder="인증번호"></td><td><button value="확인" id="accept">확인</button></td>
+</tr>
+</table>
+</fieldset>
+</form>
+
+</body>
+</html>

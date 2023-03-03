@@ -1,0 +1,14 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ include file="../menu.jsp" %>
+
+<div style="text-align: center;">
+	<div>도서전체확인</div>
+	 
+</div>
+
+
+
+
+</body>
+</html>

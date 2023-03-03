@@ -1,0 +1,11 @@
+package com.book.dao;
+
+import static common.JdbcTemplate.*;
+
+public class BookDAO {
+
+	public static void main(String[] args) {
+		
+	}
+	
+}

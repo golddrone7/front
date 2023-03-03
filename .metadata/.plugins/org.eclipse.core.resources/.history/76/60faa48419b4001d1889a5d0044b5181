@@ -1,0 +1,16 @@
+package biz;
+
+public class LoginBiz {
+
+	public LoginBiz() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	public boolean getLoginUser(String id, String pass) {
+	
+		boolean dto = dao.getLoginUser(id,pass);
+		
+		return dto;
+	}
+
+}

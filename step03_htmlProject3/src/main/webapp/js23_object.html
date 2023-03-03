@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>생성자 함수를 이용한 객체 생성</title>
+<script type="text/javascript">
+	var User= new Object();
+	//변수+게터, 세터 --> 프로퍼티
+	User.name='pororo';
+	User.age = 23;
+	
+	User.view=function(){
+		document.write('my name is ' + this.name +'<br>');
+		document.write('my age is ' + this.age);
+	}
+	
+	document.write(typeof User+"<br>"); // object
+	User.view();
+</script>
+</head>
+<body>
+
+</body>
+</html>

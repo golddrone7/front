@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	function helloToServer(){
+		
+	}
+
+</script>
+</head>
+<body>
+<form name="f">
+	이름 : <input type="text" name="irum">
+	<input type="button" value="입력" onclick="helloToServer()">
+</form>
+<div id="display"></div>
+
+
+</body>
+</html>

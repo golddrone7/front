@@ -1,0 +1,16 @@
+package com.book.dao;
+
+public class LoginDAO {
+
+	public boolean getLoginUser(String id, String password) {
+		boolean isLogin=false;
+		
+		
+		
+		
+		
+		
+		return isLogin;
+	}
+
+}

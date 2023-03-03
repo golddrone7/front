@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload=function(){
+		var xhr = new XMLHttpRequest();
+		
+		xhr.open('GET',)
+		
+	};
+
+</script>
+</head>
+<body>
+<h2>onreadystatechange 속성 사용 - xml 응답</h2>
+
+<hr>
+
+
+</body>
+</html>

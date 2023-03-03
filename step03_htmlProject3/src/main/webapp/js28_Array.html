@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var fruits=new Array('Banana', 'Orange', 'Apple', 'Mango'); // 자스는 소괄호
+	
+	document.write(typeof fruits + "<br>"); // object 
+	document.write("---------------------------------------<br>");
+	
+	fruits.sort(); // 원본 데이터의 변경
+	document.write(fruits+'<br>');
+	
+	fruits.reverse(); // 원본 데이터의 변경
+	document.write(fruits+'<br>');
+	
+	document.write(fruits.length+'<br>');
+	var text="";
+	for(i=0; i<fruits.length; i++){
+		//document.write(fruits[i]+"<br>");	
+		text+=fruits[i]+'<br>';
+	}
+	document.write(text);
+	
+</script>
+</head>
+<body>
+</body>
+</html>
+

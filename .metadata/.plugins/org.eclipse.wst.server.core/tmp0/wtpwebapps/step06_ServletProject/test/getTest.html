@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 
+	404에러 : 페이지를 못찾음(파일이 없는경우;잘못적은이름), 405에러(메서드를 못찾음)
+	method="get" ==> doGet();
+	method="post" ==> doPost();
+
+ -->
+
+
+<form action="../get.do" method="get">
+	이름 : <input type="text" name="irum"><br>
+	암호 : <input type="text" name="amho"><br>
+	<input type="submit" value="전송">
+	<input type="reset" value="취소">
+	
+	
+</form>
+
+</body>
+</html>
+<!--
+	get방식(쿼리스트링)
+
+	http://127.0.0.1:8080/servlet/get.do?irum=11&&amho=11
+  -->

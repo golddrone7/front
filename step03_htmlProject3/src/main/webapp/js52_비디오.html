@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	div{text-align: center;}
+</style>
+</head>
+<body>
+	<div>
+		<h3>호랑이 이야기</h3>
+		<video width="480"  id="vdo" controls="controls" >
+			<source src="video/tiger.mp4" type="video/mp4">
+		</video><br><br>
+		<button onclick="btnPlay()">재생</button>
+		<button onclick="btnPause()">일시정지</button>
+		<button onclick="btnStop()">정지</button>
+		<button onclick="btnRate1()">등배속</button>
+		<button onclick="btnRate2()">2배속</button><br><br>
+		<button onclick="btnPrev()"><<</button>
+		<button onclick="btnNext()">>></button>
+		<button onclick="btnNormalSize()">등배화면</button>
+		<button onclick="btnLargeSize()">2배화면</button>
+		<button onclick="btnSmallSize()">1/2배화면</button>
+	
+	
+	</div>
+<script type="text/javascript">
+	var v;
+	function btnPlay(){
+		v=document.getElementById("vdo");
+		v.play();
+	}
+	
+	function btnPause(){
+		v.pause();
+	}
+	
+	function btnStop(){
+		v.pause();
+		v.currentTime=0;
+	}
+	
+	function btnRate1(){
+		v.playbackRate=1;
+	}
+	function btnRate2(){
+		v.playbackRate=2;
+	}
+	function btnPrev(){
+		v.currentTime-=5;
+	}
+	function btnNext(){
+		v.currentTime+=5;
+	}
+	function btnNormalSize(){
+		v.width=480;
+	}
+	function btnLargeSize(){
+		v.width=720;
+	}
+	function btnSmallSize(){
+		v.width=360;
+	}
+</script>
+</body>
+</html>

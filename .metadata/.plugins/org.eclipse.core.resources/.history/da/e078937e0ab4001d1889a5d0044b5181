@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+<Resource
+	name="jdbc/ora"
+	author="Container"
+	type="javax.sql.DataSource"
+	username="edu"
+	password="1234"
+	driverClassName="oracle.jdbc.driver.OracleDriver"
+	url="jdbc:oracle:thin:@localhost:1521:xe">
+
+
+</Resource>
+<Resource
+	name="mysql"
+	author="Container"
+	type="javax.sql.DataSource"
+	username="edu"
+	password="1234"
+	driverClassName="com.mysql.cj.jdbc.Driver"
+	url="jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC">
+
+</Resource>
+</Context>
+<!--
+	컨넥션 풀(connection pool)
+	데이터베이스에 미리 접속하여 연결을 해두고 프로그램에서는
+	미리 연결되어 있는 객체를 받아서 사용하고 반환하는 방법
+	META-INF 디렉토리에 context.xml파일에 연결 옵션을 작성
+
+
+	name="사용자가 정하는 이름"
+	author="Container"
+	type="javax.sql.DataSource"
+	username="아이디"
+	password="비밀번호"
+	driverClassName="데이터베이스종류"
+	url="데이터 베이스 위치"
+	maxActive="동시접속개수"
+	maxIdle="작업수행없이 연결만해두고있을 최대개수"
+	
+	https://tomcat.apache.org/tomcat-8.5
+	
+	어느시점엔 xml을 만들어야 되는데
+	선언하는 부분하고 속성 값을 필요할 때 찾아보기
+	
+	유지보수 maven 필요한 링크
+	
+	
+  -->
+

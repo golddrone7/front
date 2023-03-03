@@ -1,0 +1,24 @@
+/**
+ * 
+ */
+
+ 
+ function sum(){
+	var url = "sumTest.jsp/?"+getParam();
+	var xhr = new XMLHttpRequest();
+	xhr.open(GET, url, true);
+	xhr.send(null);
+		 
+	xhr.onreadystatechange = function(){
+		if(xhr.status == 200 && xhr.readyState==4 ){
+			document.getElementById("sumResult").innerHTML = 
+				xhr.responseText;
+		}
+	}
+ }
+ 
+function getParam(){
+	var bottom = document.getElementById("bottom").value;
+	var height = document.getElementById("height").value;
+	return "bottom="+bottom+"&height="+height;
+}

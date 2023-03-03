@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var httpRequest=null;
+	
+	function load(url){
+		httpRequest= getXMLHttpRequest(); // 통신객체
+		//XMLHttpRequest : 서버와의 상호작용
+		// XHR은 페이지 새로고침 없이 url에서 데이터 가져오기 가능
+		
+	}
+
+</script>
+</head>
+<body>
+	<input type="button" value="simple.html" onclick="load(value)">
+	
+</body>
+</html>

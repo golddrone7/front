@@ -1,0 +1,11 @@
+/**
+ * 
+ */
+
+ 
+ function sum(){
+	 var xhr = new XMLHttpRequest();
+	 
+	 
+	 
+ }

@@ -1,0 +1,9 @@
+package dto;
+
+// VO DTO BEAN
+public class LoginDTO {
+
+	
+	
+	
+}

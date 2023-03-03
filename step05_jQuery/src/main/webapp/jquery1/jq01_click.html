@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+<!-- click, bind -->
+	<input type="button" id="btn1" value="버튼1" onclick="process()">
+	<input type="button" id="btn2" value="버튼2">
+	<input type="button" id="btn3" value="버튼3">
+
+<script type="text/javascript">
+
+	function process(){
+		alert("버튼1");	
+	}	
+	/* 	
+		$ 기호 : 제이쿼리를 의미, 제이쿼리에 접근할 수 있는 식별자
+		$() 함수 
+		-- 함수에 전달되는 매개변수는 반드시 따옴표 안에 작성(문자열의 형태로 전달)
+		-- 선택된 html요소를 제이쿼리에서 이용할 수 있는 형태로 생성해 주는 역할
+		-- 함수의인수 : class, id, 태그
+		-- $()를 이용하여 생성된 요소를 제이쿼리 객체라고 함
+	 */	
+	 /* 
+	 
+	 	ready() 실행, onload()
+	 	
+	 	CDN(Content Delivery Network) : 서버와 사용자 사이의 물리적인 거리를 줄여서 사용자에게
+	 	컨텐츠를 더욱 빠르게 제공할 수 있게 해주는, 분산된 서버로 이루어진 플랫폼
+	  */
+	$(document).ready(function(){
+		//$객체.이벤트처리함수(function(){});
+		/* var x = document.getElementById("btn2");
+		x.click(function(){
+			alert("버튼2");
+		}); */
+		
+		$("#btn2").click(function(){
+			alert("버튼2");
+		});
+		
+		$("#btn3").bind("click", function(){
+			alert("버튼3");	
+			$(this).off(); // btn3 객체를 의미
+		});
+		
+	}); 
+		
+	
+	
+</script>
+</body>
+</html>

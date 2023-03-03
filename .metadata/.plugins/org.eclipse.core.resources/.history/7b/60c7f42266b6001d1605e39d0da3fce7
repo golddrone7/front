@@ -1,0 +1,15 @@
+package step10_Ajax;
+
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Set;
+
+public class algorithm {
+
+	public static void main(String[] args) {
+
+		String[] weekday = {"SUN", "MON", "TUE", "WED", "THU", "FRI", "SAT"};
+		
+	}
+}

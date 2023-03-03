@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+
+ 
+ function sum(){
+	 var url = "sumTest.jsp/?"+getParam();
+	 var xhr = new XMLHttpRequest();
+	 
+	 
+	 xhr.onreadystatechange = function()
+	 
+	 
+ }
+ 
+function getParam(){
+	var bottom = document.getElementById("bottom").value;
+	var height = document.getElementById("height").value;
+	return "bottom="+bottom+"&height="+height;
+}
