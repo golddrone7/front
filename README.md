@@ -1,8 +1,8 @@
 # front
 
-<style> li{font-size : 20px;} </style>
 
-<ol>
+
+<ol style="color:yellow">
   <li>HTML</li>
   <li>CSS</li>
   <li>JavaScript</li>
