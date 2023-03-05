@@ -11,4 +11,3 @@
   <li>Servlet & JSP</li>
 </ol>
 
-<span style="color:green"> 글씨색 변경 </span>
