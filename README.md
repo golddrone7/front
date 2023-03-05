@@ -1,6 +1,6 @@
 # front
 
-<stlye> li{font-size : 20px;} </style>
+<style> li{font-size : 20px;} </style>
 
 <ol>
   <li>HTML</li>
