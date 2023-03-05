@@ -2,8 +2,8 @@
 
 
 
-<ol style="color:yellow">
-  <li>HTML</li>
+<ol>
+  <li style="color:yellow">HTML</li>
   <li>CSS</li>
   <li>JavaScript</li>
   <li>Jquery</li>
